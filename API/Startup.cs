@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using API.Data;
+using API.Helper;
 using API.Interface;
 using API.Middleware;
 using API.Services;
@@ -33,6 +34,8 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IUserRepo,UserRepo>();
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddScoped<ITokenService,TokenService>();
             services.AddControllers();
             services.AddDbContext<DataContext>(options=>{
