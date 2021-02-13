@@ -19,7 +19,10 @@ import { TesterrorsComponent } from './error/testerrors/testerrors.component';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { NotfoundComponent } from './error/notfound/notfound.component';
 import { ServererrorComponent } from './error/servererror/servererror.component';
-
+import { MembersCardComponent } from './members/members-card/members-card.component';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+import { MatSliderModule } from '@angular/material/slider';
+import {TabsModule} from 'ngx-bootstrap/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import { ServererrorComponent } from './error/servererror/servererror.component'
     MessagesComponent,
     TesterrorsComponent,
     NotfoundComponent,
-    ServererrorComponent
+    ServererrorComponent,
+    MembersCardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,8 @@ import { ServererrorComponent } from './error/servererror/servererror.component'
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatSliderModule,
+    TabsModule.forRoot(),
     BsDropdownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:'toast-bottom-right'
@@ -47,7 +53,8 @@ import { ServererrorComponent } from './error/servererror/servererror.component'
     )
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true}
+    {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true},
+    {provide:HTTP_INTERCEPTORS,useClass:JwtInterceptor,multi:true}
   ],
   bootstrap: [AppComponent]
 })

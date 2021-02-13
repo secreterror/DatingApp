@@ -1,0 +1,55 @@
+.fa:hover{
+	transform: scale(1.4,1.4);
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
+	opacity: 0.9;
+}
+.fa{
+	transform: scale(1.0,1.0);
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
+}
+.card-img-wrapper{
+	position: relative;
+}
+.info{
+	position:absolute;
+	bottom:-30%;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0;
+}
+.card-img-wrapper:hover .info{
+	bottom: 0;
+	opacity: 1;
+
+	
+}
+.card{
+	background-color: black;
+}
+.fa-linkedin-square{
+	color:  #0e76a8 ;
+}
+.fa-github-square{
+	color:white;
+}
+.fa-info-circle{
+	color:black;
+}
+.fa-envelope-square {
+	color:#BB001B;
+}
+.card-title{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: beige;
+}
+.card-text{
+	font-family: Arial, Helvetica, sans-serif;
+	color:white;
+}
+.animate{
+	transition: all 0.3s ease-in-out;
+}
