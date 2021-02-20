@@ -23,6 +23,9 @@ import { MembersCardComponent } from './members/members-card/members-card.compon
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { MatSliderModule } from '@angular/material/slider';
 import {TabsModule} from 'ngx-bootstrap/tabs';
+import { ProjectCardComponent } from './members/member-detail/project-card/project-card.component';
+import { MuuriModule } from 'muuri-angular';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,8 @@ import {TabsModule} from 'ngx-bootstrap/tabs';
     TesterrorsComponent,
     NotfoundComponent,
     ServererrorComponent,
-    MembersCardComponent
+    MembersCardComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,12 +49,14 @@ import {TabsModule} from 'ngx-bootstrap/tabs';
     BrowserAnimationsModule,
     FormsModule,
     MatSliderModule,
+    MuuriModule,
     TabsModule.forRoot(),
     BsDropdownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:'toast-bottom-right'
     }
-    )
+    ),
+    NgbModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true},

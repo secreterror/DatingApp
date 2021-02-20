@@ -1,3 +1,7 @@
 .row{
     background-color: grey;
 }
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}

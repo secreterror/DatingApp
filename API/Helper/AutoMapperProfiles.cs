@@ -15,6 +15,7 @@ namespace API.Helper
             .ForMember(dest=>dest.PhotoUrl,opt=>opt.MapFrom(src=>src.Blogs.FirstOrDefault(x=>x.isMain).Url));
             
             CreateMap<Blog,BlogDto>();
+            CreateMap<Project,ProjectDto>();
         }
     }
 }

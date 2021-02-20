@@ -24,6 +24,7 @@ namespace API.Data
         {
             return await _context.Users
             .Include(p=>p.Blogs)
+            .Include(p=>p.Projects)
             .SingleOrDefaultAsync(x=>x.UserName==username);
         }
 
@@ -31,6 +32,7 @@ namespace API.Data
         {
            return await _context.Users
            .Include(p=>p.Blogs)
+           .Include(P=>P.Projects)
            .ToListAsync();
         }
 

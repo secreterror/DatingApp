@@ -1,4 +1,5 @@
 import { Blog } from "./Blog";
+import { Project } from "./Project";
 
 export interface Member {
     userName: string;
@@ -14,4 +15,5 @@ export interface Member {
     organization: string;
     country: string;
     blogs: Blog[];
+    projects:Project[]
 }

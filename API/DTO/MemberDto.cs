@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using API.DTO;
 
 namespace API.Data
 {
@@ -30,6 +31,8 @@ namespace API.Data
         public string Country {get;set;}
 
         public ICollection<BlogDto> Blogs {get;set;} 
+
+        public ICollection<ProjectDto> Projects {get;set;}
 
         
     }

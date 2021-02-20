@@ -34,6 +34,8 @@ namespace API.Entities
 
         public ICollection<Blog> Blogs {get;set;} 
 
+        public ICollection<Project> Projects {get;set;}
+
 
         public int GetAge(){
 

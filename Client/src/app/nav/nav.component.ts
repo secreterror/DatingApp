@@ -10,6 +10,7 @@ import { AccountService } from 'src/_services/account.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  public isCollapsed = true;
   user :any={};
   loggedIn:boolean;
   constructor(private accountService:AccountService,private router:Router,private toastr:ToastrService) { }
@@ -24,7 +25,6 @@ export class NavComponent implements OnInit {
       this.router.navigateByUrl('/members')
     },err=>{
       console.log(err)
-      this.toastr.error(err.error)
     });
     console.log(this.user)
 

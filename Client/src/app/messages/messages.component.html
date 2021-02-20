@@ -1,1 +1,20 @@
 <p>messages works!</p>
+<div class="container">
+    <div class="row">
+       Implement Message functionality
+    </div>
+    <div class="row">
+        And display all the messages you received
+    </div>
+    
+</div>
+
+<button id="add-item-button" (click)="addToGrid()">+ Add new task</button>
+<br><br>
+<div #grid class="grid" muuriGrid [config]="layoutConfig">
+    <div class="item" muuriGridItem *ngFor="let item of blockItems">
+        <div class="item-content">
+            {{ item }}
+        </div>
+    </div>
+</div>
