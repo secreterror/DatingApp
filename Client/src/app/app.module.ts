@@ -26,6 +26,7 @@ import {TabsModule} from 'ngx-bootstrap/tabs';
 import { ProjectCardComponent } from './members/member-detail/project-card/project-card.component';
 import { MuuriModule } from 'muuri-angular';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NotfoundComponent,
     ServererrorComponent,
     MembersCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
